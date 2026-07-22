@@ -113,7 +113,7 @@ const createActivitiesTable = async () => {
           trip_id int NOT NULL,
           activity varchar(100) NOT NULL,
           num_votes integer DEFAULT 0,
-          FOREIGN KEY(trip_id) REFERENCES trips(id)
+          FOREIGN KEY(trip_id) REFERENCES trips(id) ON DELETE CASCADE
       );
     `
     try {
@@ -131,8 +131,8 @@ const createTripsDestinationsTable = async () => {
           trip_id int NOT NULL,
           destination_id int NOT NULL,
           PRIMARY KEY (trip_id, destination_id),
-          FOREIGN KEY (trip_id) REFERENCES trips(id) ON UPDATE CASCADE,
-          FOREIGN KEY (destination_id) REFERENCES destinations(id) ON UPDATE CASCADE
+          FOREIGN KEY (trip_id) REFERENCES trips(id) ON UPDATE CASCADE ON DELETE CASCADE,
+          FOREIGN KEY (destination_id) REFERENCES destinations(id) ON UPDATE CASCADE ON DELETE CASCADE
       );
   `
     try {
@@ -169,8 +169,8 @@ const createTripsUsersTable = async () => {
           trip_id int NOT NULL,
           user_id int NOT NULL,
           PRIMARY KEY (trip_id, user_id),
-          FOREIGN KEY (trip_id) REFERENCES trips(id) ON UPDATE CASCADE,
-          FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE
+          FOREIGN KEY (trip_id) REFERENCES trips(id) ON UPDATE CASCADE ON DELETE CASCADE,
+          FOREIGN KEY (user_id) REFERENCES users(id) ON UPDATE CASCADE ON DELETE CASCADE
       );
   `
     try {
