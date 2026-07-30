@@ -9,6 +9,11 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:3001'
       }
-    }
+    },
+    build: {
+    outDir: '../server/public',
+    emptyOutDir: true
+  }
+
   }
 })

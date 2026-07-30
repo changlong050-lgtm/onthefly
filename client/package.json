@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "vite",
    "start": "npx http-server ./dist",
-    "build": "vite build",
+    
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build": "cd client && vite build"
   },
   "dependencies": {
     "react": "^19.1.0",
