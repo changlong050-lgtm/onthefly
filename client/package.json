@@ -9,7 +9,7 @@
     
     "lint": "eslint .",
     "preview": "vite preview",
-    "build": "cd client && vite build"
+    "build": " vite build"
   },
   "dependencies": {
     "react": "^19.1.0",
