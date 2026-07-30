@@ -6,7 +6,7 @@ const options = {
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
     // callbackURL: 'http://localhost:3001/auth/github/callback'
-    callbackURL: 'https://server-1k0i.onrender.com'
+    callbackURL: 'https://server-1k0i.onrender.com/auth/github/callback'
 }
 
 
