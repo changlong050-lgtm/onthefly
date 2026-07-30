@@ -39,7 +39,8 @@ router.get(
 router.get(
     '/github/callback',
     passport.authenticate('github', {
-        successRedirect: 'http://localhost:5173/',
+        successRedirect: 'https://client-qaep.onrender.com',
+        // successRedirect: 'http://localhost:5173/',
         failureRedirect: '/destinations',
     })
 )
